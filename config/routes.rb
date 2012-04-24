@@ -6,6 +6,7 @@ Jokes::Application.routes.draw do
   get "jokes/show"
 
 	resources :jokes
+	resources :scores
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
