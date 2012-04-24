@@ -20,6 +20,9 @@ class JokesController < ApplicationController
 	end
 
 	def update
+		@joke = Joke.find(params[:id])
+		@joke.increment!(params[:vote])
+		redirect_to jokes_path
 	end
 
 	def destroy
@@ -31,4 +34,7 @@ class JokesController < ApplicationController
   def show
 		@joke = Joke.find(params[:id])
   end
+
+	def edit
+	end
 end

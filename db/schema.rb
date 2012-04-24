@@ -10,20 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120424222154) do
+ActiveRecord::Schema.define(:version => 20120424233514) do
 
   create_table "jokes", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.text     "content"
-  end
-
-  create_table "scores", :force => true do |t|
-    t.integer  "item_id"
-    t.integer  "up"
-    t.integer  "down"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "content"
+    t.integer  "up",         :default => 0
+    t.integer  "down",       :default => 0
   end
 
 end
