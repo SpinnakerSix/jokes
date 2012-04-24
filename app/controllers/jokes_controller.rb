@@ -23,6 +23,9 @@ class JokesController < ApplicationController
 	end
 
 	def destroy
+		@joke = Joke.find(params[:id])
+		@joke.delete
+		redirect_to jokes_path
 	end
 
   def show

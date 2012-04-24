@@ -3,6 +3,8 @@
 </h1>
 <% @jokes.each do |j| %>
 <%= j.content %>
+
 <br>
 <br>
+<%= link_to 'delete', joke_path(j.id), :method => 'DELETE' %>
 <% end %>
