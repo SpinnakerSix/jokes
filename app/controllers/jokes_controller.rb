@@ -20,7 +20,7 @@ class JokesController < ApplicationController
 	end
 
 	def update
-		@joke = Joke.find(params[:id])
+		@joke = Joke.find_by_id(params[:id])
 		@joke.increment!(params[:vote])
 		redirect_to jokes_path
 	end
